@@ -2,11 +2,11 @@ const adminRouter = require('express').Router();
 
 adminRouter.get('/add-product', (req, res, next) => {
   res.send(
-    '<form action="/product" method="POST"><input type="text" name="title"><button type="submit"/>Submit</button></form>'
+    '<form action="/add-product" method="POST"><input type="text" name="title"><button type="submit"/>Submit</button></form>'
   );
 });
 
-adminRouter.post('/product', (req, res, next) => {
+adminRouter.post('/add-product', (req, res, next) => {
   console.log(req.body);
   res.redirect('/');
 });
