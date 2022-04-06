@@ -1,20 +1,23 @@
 const http = require('http');
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 
-app.use((req, res, next) => {
-  console.log('Always run');
-  next();
-});
+app.use(express.urlencoded(false));
 
 app.use('/add-product', (req, res, next) => {
-  console.log('Hello World2');
-  res.send('add-product');
+  res.send(
+    '<form action="/product" method="POST"><input type="text" name="title"><button type="submit"/>Submit</button></form>'
+  );
+});
+
+app.use('/product', (req, res, next) => {
+  console.log(req.body);
+  res.redirect('/');
 });
 
 app.use('/', (req, res, next) => {
-  console.log('Hello World2');
-  res.send({ some: 'json' });
+  res.send('hello world');
 });
 
 const server = http.createServer(app);
