@@ -7,7 +7,7 @@ const shopRouter = require('./routes/shop');
 
 app.use(express.urlencoded(false));
 
-app.use(adminRouter);
+app.use('/admin', adminRouter);
 app.use(shopRouter);
 
 app.use((req, res, send) => {

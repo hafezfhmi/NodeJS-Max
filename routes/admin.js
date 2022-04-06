@@ -2,7 +2,7 @@ const adminRouter = require('express').Router();
 
 adminRouter.get('/add-product', (req, res, next) => {
   res.send(
-    '<form action="/add-product" method="POST"><input type="text" name="title"><button type="submit"/>Submit</button></form>'
+    '<form action="/admin/add-product" method="POST"><input type="text" name="title"><button type="submit"/>Submit</button></form>'
   );
 });
 
