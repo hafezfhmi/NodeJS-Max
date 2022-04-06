@@ -1,9 +1,8 @@
+const path = require('path');
 const adminRouter = require('express').Router();
 
 adminRouter.get('/add-product', (req, res, next) => {
-  res.send(
-    '<form action="/admin/add-product" method="POST"><input type="text" name="title"><button type="submit"/>Submit</button></form>'
-  );
+  res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));
 });
 
 adminRouter.post('/add-product', (req, res, next) => {
