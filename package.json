@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-max",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hafezfhmi/NodeJS-Max-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hafezfhmi/NodeJS-Max-/issues"
+  },
+  "homepage": "https://github.com/hafezfhmi/NodeJS-Max-#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
